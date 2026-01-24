@@ -89,7 +89,7 @@ export const SERVICES: (ServiceItem & { icon: any })[] = [
       { title: "Acciones de Inconstitucionalidad", desc: "Nulidad de multas, sanciones y controversias constitucionales." }
     ],
     icon: Scale
-  }
+  },
 ];
 
 export const CONTACT_INFO: ContactInfo = {
@@ -105,7 +105,7 @@ export const CONTACT_INFO: ContactInfo = {
       phone: "33 2919 9200"
     }
   ],
-  email: "contacto@perezgonzalezco.mx",
+  email: "perezygonzalezabogados2@gmail.com",
   whatsapp: "33 1526 5755",
   schedule: "Lunes a Viernes: 09:00 a.m. – 05:00 p.m."
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Instagram, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Facebook } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 
 const Footer: React.FC = () => {
@@ -52,9 +52,14 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-sans text-xs text-white uppercase tracking-widest mb-6">Social</h4>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-500 hover:text-gold transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-gray-500 hover:text-gold transition-colors"><Instagram size={20} /></a>
-              <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-500 hover:text-gold transition-colors"><Mail size={20} /></a>
+              <a 
+                href="https://web.facebook.com/people/P%C3%A9rez-y-Gonz%C3%A1lez-abogados/61559029127246/?rdid=Y6uKHxTuOVjZ3kXa&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1ABg1vUrKe%2F%3F_rdc%3D1%26_rdr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-gold transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
             </div>
           </div>
         </div>
