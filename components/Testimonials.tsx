@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
             className="flex gap-8 px-8"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ 
-                duration: 60, 
+                duration: 35, 
                 ease: "linear", 
                 repeat: Infinity 
             }}
