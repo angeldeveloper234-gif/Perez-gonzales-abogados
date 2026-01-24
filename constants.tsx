@@ -112,4 +112,4 @@ export const CONTACT_INFO: ContactInfo = {
 
 export const WHATSAPP_LINK = "https://wa.me/523315265755";
 export const QUOTE = "“La justicia se defiende con la razón y no con las armas.”";
-export const QUOTE_AUTHOR = "Pérez González Co.";
+export const QUOTE_AUTHOR = "Pérez y González Abogados";

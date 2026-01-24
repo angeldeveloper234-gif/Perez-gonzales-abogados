@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
           className="mb-8 overflow-hidden"
         >
           <span className="font-sans text-xs md:text-sm tracking-[0.4em] uppercase text-gold/80 border border-gold/30 px-4 py-2 rounded-full backdrop-blur-md">
-            Pérez González Co.
+            Pérez y González Abogados
           </span>
         </motion.div>
 

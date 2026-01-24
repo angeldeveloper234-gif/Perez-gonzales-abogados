@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <img 
               src="https://nmnofwinjufyyykyaelc.supabase.co/storage/v1/object/sign/Perez%20Gonzalez%20Co.%20Abogados/logo-gonzales.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNzRlMzZmMy0wZDFhLTQ5NWMtYWMwMS0zNjMzMDY0Y2YwZTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQZXJleiBHb256YWxleiBDby4gQWJvZ2Fkb3MvbG9nby1nb256YWxlcy5wbmciLCJpYXQiOjE3NjkyNzg5MDcsImV4cCI6MTgwMDgxNDkwN30.uRkGpMw4Gfncw30tO4h22P32vEEIlCCYh0Nca6ZgHDg" 
-              alt="Pérez González Co." 
+              alt="Pérez y González Abogados" 
               className="h-[60px] w-auto object-contain mb-6 opacity-90"
             />
             <p className="font-sans text-gray-500 text-sm leading-relaxed max-w-sm">
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-end text-[10px] text-gray-700 uppercase tracking-widest font-sans">
-          <p>© 2026 Pérez González Co.</p>
+          <p>© 2026 Pérez y González Abogados</p>
         </div>
       </div>
     </footer>

@@ -45,7 +45,7 @@ const AboutUs: React.FC = () => {
             </h2>
             
             <p className="font-sans text-gray-400 text-sm md:text-base leading-relaxed mb-10 border-l-2 border-white/10 pl-6">
-              En Pérez González Co., entendemos que el derecho no es solo técnica, es humanidad. 
+              En Pérez y González Abogados, entendemos que el derecho no es solo técnica, es humanidad. 
               Ofrecemos soluciones jurídicas claras y efectivas, fusionando el rigor profesional 
               con un acompañamiento cercano. No solo resolvemos conflictos; construimos certeza.
             </p>
