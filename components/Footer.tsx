@@ -62,10 +62,6 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-end text-[10px] text-gray-700 uppercase tracking-widest font-sans">
           <p>© 2026 Pérez González Co.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Aviso de Privacidad</a>
-            <a href="#" className="hover:text-white transition-colors">Términos de Uso</a>
-          </div>
         </div>
       </div>
     </footer>

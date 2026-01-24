@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Firma', href: '#home' },
+    { name: 'Firma', href: '#about' },
     { name: 'Servicios', href: '#services' },
     { name: 'Certeza Jurídica', href: '#certainty' },
     { name: 'Testimonios', href: '#reviews' },

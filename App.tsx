@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import LegalCertainty from './components/LegalCertainty';
 import Testimonials from './components/Testimonials';
@@ -73,6 +74,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <AboutUs />
         <Services />
         <LegalCertainty />
         <Testimonials />
