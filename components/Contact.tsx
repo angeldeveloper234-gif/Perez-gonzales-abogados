@@ -18,7 +18,24 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Gracias por contactarnos. Nos pondremos en contacto con usted a la brevedad.');
+    
+    const { firstName, lastName, phone, email, message } = formData;
+    
+    const subject = `Consulta Sitio Web: ${firstName} ${lastName}`;
+    const body = `Nombre: ${firstName} ${lastName}
+Teléfono: ${phone}
+Email: ${email}
+
+Mensaje:
+${message}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:${CONTACT_INFO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Reset form
     setFormData({ firstName: '', lastName: '', phone: '', email: '', message: '' });
   };
 
