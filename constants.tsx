@@ -5,37 +5,51 @@ import { Briefcase, ScrollText, HeartHandshake, ShieldCheck, Scale } from 'lucid
 export const REVIEWS: Review[] = [
   {
     id: 1,
-    name: "Beatriz González",
-    image: "https://lh3.googleusercontent.com/a/ACg8ocJGcXykuh-sIrarhlbr5rs3atqfdSFJeavwwph9BfcThaHqrw=w29-h29-p-rp-mo-br100",
-    comment: "Excelente servicio, atención clara y profesional en todo momento.",
+    name: "Luis Alfonso Hernández Jiménez",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXtP9-u6fsevYFNVienRn8DwjpFBP4cdjeGTBzUN4PNArJDvqg=w100-h100-p-rp-mo-br100",
+    comment: "Bueno para negociar, me ahorraron dinero, gracias a un convenio.",
     rating: 5
   },
   {
     id: 2,
-    name: "Eduardo Perez Ochoa",
-    image: "https://lh3.googleusercontent.com/a/ACg8ocJbuISrkSDskZ30v4pGdxxDVUO4kryUnXBvr_MrQNgh1QsPbQ=w29-h29-p-rp-mo-ba3-br100",
-    comment: "Son muy amables y tienen una gran facilidad para ayudar. La explicación fue excelente.",
+    name: "Fletes y Mudanzas",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjWEx4euDQ20N0bV1erCn7F1u-s7SsaB-HFA6gfMuIYE3kDGlSx5Cg=w100-h100-p-rp-mo-ba4-br100",
+    comment: "Me gustó mucho la atención y la asesoría que me brindaron en mi problema, muchas gracias.",
     rating: 5
   },
   {
     id: 3,
-    name: "Luis Alfonso Hernández Jiménez",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjXtP9-u6fsevYFNVienRn8DwjpFBP4cdjeGTBzUN4PNArJDvqg=w29-h29-p-rp-mo-br100",
-    comment: "Buenos para negociar, me ahorraron dinero gracias a un convenio.",
+    name: "Ara Gon",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjVV615Grb92F0XE1lHWEmFG9dnPQvfKsljH96VcdQT-Ed7e_3zJ=w100-h100-p-rp-mo-br100",
+    comment: "Muy profesionales, gracias!",
     rating: 5
   },
   {
     id: 4,
-    name: "Leonel Castañeda",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjVKibGfb-Zqbv5E0e3o7woAMrg2NlfBcP2Y0XaEqRgcRdCCrXlo=w29-h29-p-rp-mo-br100",
+    name: "Eduardo Perez Ochoa",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocJbuISrkSDskZ30v4pGdxxDVUO4kryUnXBvr_MrQNgh1QsPbQ=w100-h100-p-rp-mo-ba3-br100",
+    comment: "Son muy amables y tienen una gran facilidad para ayudar. La explicación fue excelente, 9 de 10.",
+    rating: 4
+  },
+  {
+    id: 5,
+    name: "Beatriz González",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocJGcXykuh-sIrarhlbr5rs3atqfdSFJeavwwph9BfcThaHqrw=w100-h100-p-rp-mo-br100",
     comment: "Excelente servicio.",
     rating: 5
   },
   {
-    id: 5,
-    name: "Fletes y Mudanzas",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjWEx4euDQ20N0bV1erCn7F1u-s7SsaB-HFA6gfMuIYE3kDGlSx5Cg=w29-h29-p-rp-mo-ba4-br100",
-    comment: "Me gustó mucho la atención y la asesoría.",
+    id: 6,
+    name: "Leonel Castañeda",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjVKibGfb-Zqbv5E0e3o7woAMrg2NlfBcP2Y0XaEqRgcRdCCrXlo=w100-h100-p-rp-mo-br100",
+    comment: "Excelente servicio.",
+    rating: 5
+  },
+  {
+    id: 7,
+    name: "Rosa Isela Gonzalez",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocJdWy3Q6Ww1pn-eNZY7qHyJNCSKNKH6YbxyC_YBcYb9W2-viQ=w100-h100-p-rp-mo-br100",
+    comment: "Excelente servicio.",
     rating: 5
   }
 ];
@@ -96,13 +110,8 @@ export const CONTACT_INFO: ContactInfo = {
   locations: [
     {
       name: "Sede Jardines del Country",
-      address: "Donceles 2298A, Col. Jardines del Country, Guadalajara, Jal.",
+      address: "Donceles 2298A, Col. Jardines del Country, 44210 Guadalajara, Jal., México",
       phone: "33 2154 5725"
-    },
-    {
-      name: "Sede Centro Corporativo",
-      address: "Av. 16 de Septiembre #730, Piso 2, Despacho 203/205, Condominio Guadalajara.",
-      phone: "33 2919 9200"
     }
   ],
   email: "perezygonzalezabogados2@gmail.com",

@@ -81,19 +81,40 @@ const Services: React.FC = () => {
                 />
               </div>
               
-              <div className="mt-8 md:pl-16 grid grid-cols-1 md:grid-cols-2 gap-8 overflow-hidden h-0 group-hover:h-auto transition-all duration-500 opacity-0 group-hover:opacity-100">
-                <div className="col-span-1 md:col-span-2 mb-2">
-                     <p className="font-sans text-gray-200 text-lg leading-relaxed max-w-3xl border-l-2 border-gold/50 pl-6 py-2">
-                       {service.description}
-                     </p>
-                </div>
-                {service.features.map((feature, fIndex) => (
-                    <div key={fIndex} className="pl-6 pt-2">
-                        <h4 className="font-serif text-gold text-xl mb-2">{feature.title}</h4>
-                        <p className="font-sans text-gray-400 text-sm leading-relaxed tracking-wide">{feature.desc}</p>
+              {/* Accordion Content */}
+              <AnimatePresence>
+                {hoveredIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-8 md:pl-16 grid grid-cols-1 md:grid-cols-2 gap-10 pb-4">
+                      {/* Main Description */}
+                      <div className="col-span-1 md:col-span-2 mb-4">
+                           <p className="font-sans text-white text-lg md:text-xl leading-relaxed max-w-3xl border-l-2 border-gold pl-6 py-2 shadow-sm">
+                             {service.description}
+                           </p>
+                      </div>
+                      
+                      {/* Sub-services / Features */}
+                      {service.features.map((feature, fIndex) => (
+                          <div key={fIndex} className="pl-6 pt-2 border-l border-white/5 md:border-none">
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
+                                <h4 className="font-serif text-gold-light text-xl font-medium tracking-wide">{feature.title}</h4>
+                              </div>
+                              <p className="font-sans text-gray-300 text-base leading-relaxed tracking-wide pl-3.5">
+                                {feature.desc}
+                              </p>
+                          </div>
+                      ))}
                     </div>
-                ))}
-              </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
@@ -106,7 +127,7 @@ const Services: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ 
-              opacity: 0.5, 
+              opacity: 0.2, // Changed to 20% opacity as requested
               scale: 1,
               x: mousePos.x - 200, // Center the image (width 400 / 2)
               y: mousePos.y - 150  // Center the image (height 300 / 2)
