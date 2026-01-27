@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import { REVIEWS } from '../constants';
@@ -6,6 +6,18 @@ import { REVIEWS } from '../constants';
 const Testimonials: React.FC = () => {
   // Duplicate array for infinite scroll effect
   const reviews = [...REVIEWS, ...REVIEWS, ...REVIEWS];
+  const [duration, setDuration] = useState(35);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Faster on mobile (20s) vs Desktop (35s)
+      setDuration(window.innerWidth < 768 ? 20 : 35);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section id="reviews" className="py-32 bg-obsidian relative overflow-hidden">
@@ -27,7 +39,7 @@ const Testimonials: React.FC = () => {
             className="flex gap-8 px-8"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ 
-                duration: 35, 
+                duration: duration, 
                 ease: "linear", 
                 repeat: Infinity 
             }}
