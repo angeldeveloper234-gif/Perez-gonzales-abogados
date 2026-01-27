@@ -10,8 +10,8 @@ const Testimonials: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      // Faster on mobile (20s) vs Desktop (35s)
-      setDuration(window.innerWidth < 768 ? 20 : 35);
+      // Very fast on mobile (10s) vs Standard on Desktop (35s)
+      setDuration(window.innerWidth < 768 ? 10 : 35);
     };
 
     handleResize();
