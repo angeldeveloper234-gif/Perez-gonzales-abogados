@@ -14,6 +14,18 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: 'Firma', href: '#about' },
     { name: 'Servicios', href: '#services' },
@@ -22,14 +34,20 @@ const Header: React.FC = () => {
     { name: 'Contacto', href: '#contact' },
   ];
 
+  // Calculate header classes dynamically
+  // IMPORTANT: We must remove backdrop-blur (and other filters) when the mobile menu is open.
+  // Filters create a "containing block" for fixed-position descendants, causing the full-screen menu
+  // to be clipped to the header's height instead of the viewport.
+  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+    isMobileMenuOpen 
+      ? 'bg-transparent py-3' // No blur when menu is open so fixed children work correctly
+      : isScrolled 
+        ? 'bg-obsidian/80 backdrop-blur-md py-3 border-b border-white/5' 
+        : 'bg-transparent py-3'
+  }`;
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled 
-          ? 'bg-obsidian/80 backdrop-blur-md py-3 border-b border-white/5' 
-          : 'bg-transparent py-3'
-      }`}
-    >
+    <header className={headerClasses}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Image */}
         <a href="#home" className="block z-50 group relative">
@@ -66,7 +84,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-ivory z-50"
+          className="md:hidden text-ivory z-50 relative"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,7 +99,10 @@ const Header: React.FC = () => {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-obsidian flex flex-col justify-center items-center md:hidden z-40"
             >
-              <div className="flex flex-col space-y-10 text-center">
+              {/* Optional: Add background noise or texture to the menu */}
+              <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none"></div>
+              
+              <div className="flex flex-col space-y-10 text-center relative z-10">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
