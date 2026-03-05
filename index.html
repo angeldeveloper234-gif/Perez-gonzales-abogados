@@ -1,90 +1,163 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pérez y González Abogados | Excellence Redefined</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Cormorant Garamond"', 'serif'],
-              sans: ['"Manrope"', 'sans-serif'],
-            },
-            colors: {
-              obsidian: '#050505', // Vantablack feel
-              ivory: '#F5F5F5',    // Off-white text
-              gold: {
-                DEFAULT: '#D4AF37', // Aged Gold
-                light: '#E5C558',
-                dim: '#8A701E',
-              },
-              charcoal: '#1A1A1A',
-            },
-            backgroundImage: {
-              'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.07%22/%3E%3C/svg%3E')",
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            },
-            transitionTimingFunction: {
-              'bezier': 'cubic-bezier(0.33, 1, 0.68, 1)',
-            }
-          }
-        }
-      }
-    </script>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pérez y González | Sitio en Mantenimiento</title>
     <style>
-      /* Hide scrollbar for immersion */
-      ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-      }
-      
-      body {
-        background-color: #050505;
-        cursor: none; /* Custom cursor everywhere */
-      }
-
-      /* Text selection color */
-      ::selection {
-        background: #D4AF37;
-        color: #050505;
-      }
-
-      .text-shimmer {
-        background: linear-gradient(to right, #666 0%, #fff 50%, #666 100%);
-        background-size: 200% auto;
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        animation: shimmer 5s linear infinite;
-      }
-
-      @keyframes shimmer {
-        to {
-          background-position: 200% center;
+        /* Diseño Premium Minimalista */
+        :root {
+            --primary: #111827;
+            --secondary: #4b5563;
+            --accent: #9ca3af;
+            --bg: #ffffff;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
         }
-      }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: var(--font-sans);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 480px;
+            padding: 2rem;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .icon-container {
+            margin-bottom: 2.5rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .icon-bg {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(17, 24, 39, 0.03);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+            stroke-width: 1.25;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .divider {
+            width: 32px;
+            height: 2px;
+            background: var(--primary);
+            margin: 1.5rem auto;
+            opacity: 0.15;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--secondary);
+            font-weight: 400;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.27.5",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
 </head>
-  <body class="bg-obsidian text-ivory antialiased overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body>
+    <main class="content">
+        <div class="icon-container">
+            <div class="icon-bg"></div>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                </path>
+            </svg>
+        </div>
+        <h1>Sitio en mantenimiento</h1>
+        <div class="divider"></div>
+        <p>
+            Nuestra plataforma está temporalmente inactiva por tareas administrativas y mejoras técnicas.
+            Agradecemos su paciencia mientras trabajamos para ofrecerle un mejor servicio.
+        </p>
+        <div class="footer-note">Pérez y González Abogados</div>
+    </main>
+</body>
+
 </html>
