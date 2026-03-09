@@ -9,24 +9,24 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative w-full h-screen min-h-[800px] overflow-hidden flex items-center justify-center bg-obsidian">
-      
+
       {/* Cinematic Background */}
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/30 via-transparent to-obsidian z-10"></div>
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         {/* Abstract Brutalist Architecture */}
-        <img 
-          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop" 
-          alt="Abstract Structure" 
+        <img
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670&auto=format&fit=crop"
+          alt="Abstract Structure"
           className="w-full h-full object-cover grayscale opacity-60"
         />
       </motion.div>
 
       <div className="container mx-auto px-6 relative z-20 flex flex-col items-center text-center">
-        
+
         {/* Subheading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -40,28 +40,45 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* Main Title */}
-        <div className="max-w-6xl mx-auto overflow-hidden">
-          <motion.h1 
+        <div className="max-w-5xl mx-auto overflow-hidden">
+          <motion.h1
             initial={{ y: "120%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.2, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
-            className="font-serif text-5xl md:text-8xl lg:text-[7rem] leading-[0.9] text-ivory tracking-tight"
+            className="font-serif text-4xl md:text-6xl lg:text-[5rem] leading-[1.1] text-ivory tracking-tight"
           >
-            LA EXCELENCIA LEGAL <br />
-            <span className="italic text-gold font-light">REDEFINIDA</span>
+            Tus aliados legales. <br />
+            <span className="italic text-gold font-light text-3xl md:text-5xl lg:text-[4rem]">
+              Resolvemos tus problemas
+            </span> <br />
+            con estrategias claras y humanas.
           </motion.h1>
         </div>
 
-        {/* Description */}
+        {/* Description / Subtitle */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 1 }}
-          className="mt-8 font-sans text-sm md:text-base text-gray-400 max-w-lg leading-relaxed tracking-wide"
+          className="mt-8 font-sans text-sm md:text-lg text-gray-400 max-w-2xl leading-relaxed tracking-wide"
         >
-          Estrategia jurídica de alta precisión para corporativos y patrimonios. 
-          Donde la ley se encuentra con la sofisticación.
+          Despacho Legal Especializado en Divorcios, Intestados, IMSS y Defensa Administrativa en Guadalajara, Jalisco.
         </motion.p>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="mt-10"
+        >
+          <a
+            href="/#services"
+            className="inline-block px-10 py-4 bg-transparent border border-gold/50 text-gold hover:bg-gold hover:text-black transition-all duration-500 font-sans tracking-[0.2em] text-sm rounded-sm"
+          >
+            CONOCER MÁS
+          </a>
+        </motion.div>
       </div>
 
       {/* Floating Scroll CTA */}
@@ -72,7 +89,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 1.5 }}
           className="pointer-events-auto"
         >
-          <a href="#services" className="group flex flex-col items-center gap-4 cursor-pointer">
+          <a href="/#services" className="group flex flex-col items-center gap-4 cursor-pointer">
             <span className="text-[10px] tracking-[0.3em] uppercase text-gray-500 group-hover:text-gold transition-colors">Descubrir</span>
             <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-gold transition-colors duration-500 backdrop-blur-sm bg-white/5">
               <ArrowDown size={16} className="text-white group-hover:text-gold animate-bounce" />

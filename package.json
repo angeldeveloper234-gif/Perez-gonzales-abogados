@@ -9,10 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react-dom": "^19.2.3",
+    "@notionhq/client": "^5.11.1",
+    "@types/react-router-dom": "^5.3.3",
     "framer-motion": "^12.27.5",
+    "lucide-react": "^0.562.0",
+    "notion-to-md": "^3.1.9",
     "react": "^19.2.3",
-    "lucide-react": "^0.562.0"
+    "react-dom": "^19.2.3",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.13.1",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

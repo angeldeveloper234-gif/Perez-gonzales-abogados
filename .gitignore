@@ -25,3 +25,14 @@ dist-ssr
 
 # Backup local del repositorio original
 backup_original_repo
+
+# Env files (contain sensitive API keys)
+.env
+.env.*
+
+# Debug/temp files
+debug_notion.py
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json

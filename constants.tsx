@@ -56,51 +56,42 @@ export const REVIEWS: Review[] = [
 
 export const SERVICES: (ServiceItem & { icon: any })[] = [
   {
-    title: "Sector Empresarial y Corporativo",
-    description: "Estrategia preventiva y blindaje legal para el funcionamiento óptimo de su negocio.",
+    title: "Divorcio",
+    description: "Asesoría estratégica para procesos de separación con enfoque en soluciones pacíficas y efectivas.",
     features: [
-      { title: "Asesoría Patronal", desc: "Decisiones legales blindadas para empresarios y prevención de riesgos laborales." },
-      { title: "Compliance Normativo", desc: "Gestión integral de requerimientos legales y capacitación estratégica en RRHH." },
-      { title: "Contratos de Arrendamiento", desc: "Instrumentos para blindar su patrimonio inmobiliario con rentas protegidas." }
-    ],
-    icon: Briefcase
-  },
-  {
-    title: "Propiedad Industrial e Intelectual",
-    description: "Protección de activos intangibles y defensa de la creatividad.",
-    features: [
-      { title: "Protección de Activos", desc: "Registro, seguimiento y mantenimiento de marcas y patentes (Nacional/Internacional)." },
-      { title: "Derechos de Autor", desc: "Defensa y gestión de signos distintivos y mecanismos para patentes." }
-    ],
-    icon: ScrollText
-  },
-  {
-    title: "Derecho Familiar y Ciclo de Vida",
-    description: "Soluciones humanas y ágiles para momentos de transición personal.",
-    features: [
-      { title: "Divorcio Incausado", desc: "Gestión enfocada en la paz mental y la eficiencia del proceso." },
-      { title: "Pensión Alimenticia", desc: "Fijación, modificación y cumplimiento de obligaciones." },
-      { title: "Guardia y Custodia", desc: "Defensa del interés superior del menor y regulación de la patria potestad." },
-      { title: "Procesos de Adopción", desc: "Acompañamiento experto en trámites ante el DIF para construir nuevas familias." }
+      { title: "Enfoque Jurídico", desc: "Especialistas en procesos de mutuo consentimiento y resolución de conflictos familiares." },
+      { title: "Custodia y Convivencia", desc: "Diseño y negociación de convenios protectores para el bienestar de los menores." },
+      { title: "Pensión Alimenticia", desc: "Gestión integral para la fijación y aseguramiento del sustento familiar." }
     ],
     icon: HeartHandshake
   },
   {
-    title: "Seguridad Social y Futuro",
-    description: "Garantizando su bienestar médico y financiero a largo plazo.",
+    title: "Juicios Sucesorios",
+    description: "Regularización patrimonial y mediación experta para la transición ordenada de bienes.",
     features: [
-      { title: "Afiliación al IMSS", desc: "Cobertura médica integral y cotización de semanas ($1,000 MXN/mes)." },
-      { title: "Recuperación AFORE", desc: "Hacemos valer su derecho legal para recuperar sus fondos de retiro." },
-      { title: "Asesoría por Desempleo", desc: "Gestión de apoyos y trámites específicos en transición laboral." }
+      { title: "Intestados y Testamentos", desc: "Acompañamiento legal completo en la adjudicación de herencias y bienes raíces." },
+      { title: "Regularización de Propiedades", desc: "Trámites legales para dar certeza jurídica a su patrimonio inmobiliario." },
+      { title: "Mediación entre Herederos", desc: "Facilitamos acuerdos justos para evitar litigios prolongados y costosos." }
+    ],
+    icon: ScrollText
+  },
+  {
+    title: "Seguridad Social",
+    description: "Cumplimiento normativo y defensa estratégica en materia de seguridad social y laboral.",
+    features: [
+      { title: "Defensa IMSS", desc: "Atención especializada ante auditorías, multas y requerimientos injustificados." },
+      { title: "Altas Patronales", desc: "Asesoría técnica para el correcto registro y gestión de sus obligaciones como empleador." },
+      { title: "Estrategia de Seguridad", desc: "Diseño de modelos de cumplimiento para prevenir riesgos financieros y legales." }
     ],
     icon: ShieldCheck
   },
   {
-    title: "Constitucional y Amparo",
-    description: "Litigio de alto nivel para la defensa de derechos fundamentales.",
+    title: "Defensa Administrativa",
+    description: "Protección legal contra actos de autoridad y resoluciones administrativas arbitrarias.",
     features: [
-      { title: "Juicio de Amparo", desc: "Defensa en materia laboral y administrativa." },
-      { title: "Acciones de Inconstitucionalidad", desc: "Nulidad de multas, sanciones y controversias constitucionales." }
+      { title: "Juicios de Nulidad", desc: "Impugnación efectiva de actos administrativos y fiscales ante tribunales competentes." },
+      { title: "Amparo Administrativo", desc: "Protección constitucional contra leyes o actos que vulneren sus derechos." },
+      { title: "Gestión ante Autoridades", desc: "Representación profesional en procedimientos y trámites de naturaleza administrativa." }
     ],
     icon: Scale
   },

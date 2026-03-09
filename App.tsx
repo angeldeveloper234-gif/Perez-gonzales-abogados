@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, useSpring, useMotionValue } from 'framer-motion';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-import LegalCertainty from './components/LegalCertainty';
-import Testimonials from './components/Testimonials';
-import PaymentMethods from './components/PaymentMethods';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  
-  const springConfig = { damping: 20, stiffness: 400 }; 
+
+  const springConfig = { damping: 20, stiffness: 400 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
@@ -29,9 +26,9 @@ const CustomCursor = () => {
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (
-        target.tagName === 'A' || 
-        target.tagName === 'BUTTON' || 
-        target.closest('a') || 
+        target.tagName === 'A' ||
+        target.tagName === 'BUTTON' ||
+        target.closest('a') ||
         target.closest('button') ||
         target.classList.contains('cursor-pointer')
       ) {
@@ -61,29 +58,48 @@ const CustomCursor = () => {
       }}
       animate={{
         scale: isHovered ? 4 : 1,
-        backgroundColor: isHovered ? '#D4AF37' : '#F5F5F5', 
+        backgroundColor: isHovered ? '#D4AF37' : '#F5F5F5',
       }}
     />
   );
 };
 
+const ScrollToAnchor = () => {
+  const { hash, pathname } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Slightly delay scrolling to ensure the route has rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [hash, pathname]);
+
+  return null;
+};
+
 function App() {
   return (
-    <div className="bg-obsidian min-h-screen text-ivory selection:bg-gold selection:text-black">
-      <CustomCursor />
-      <Header />
-      <main>
-        <Hero />
-        <AboutUs />
-        <Services />
-        <LegalCertainty />
-        <Testimonials />
-        <PaymentMethods />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <Router>
+      <div className="bg-obsidian min-h-screen text-ivory selection:bg-gold selection:text-black">
+        <CustomCursor />
+        <Header />
+        <ScrollToAnchor />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+        </Routes>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
 }
 
