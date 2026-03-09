@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Floating Scroll CTA */}
-      <div className="absolute bottom-12 left-0 right-0 z-20 flex justify-center pointer-events-none">
+      <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center pointer-events-none">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}

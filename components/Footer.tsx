@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Facebook, Instagram } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
 import { Link } from 'react-router-dom';
 
@@ -63,25 +63,13 @@ const Footer: React.FC = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/perezygonzalezabogados/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gold transition-colors"
                 title="Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-500 hover:text-gold transition-colors"
-                title="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-500 hover:text-gold transition-colors"
-                title="X"
-              >
-                <Twitter size={20} />
               </a>
             </div>
           </div>

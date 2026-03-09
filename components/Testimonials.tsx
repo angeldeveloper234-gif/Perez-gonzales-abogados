@@ -39,7 +39,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
 
     <div className="mt-6 md:mt-8 pt-6 border-t border-white/5 flex justify-between items-center opacity-50 group-hover:opacity-100 transition-opacity">
       <span className="text-[10px] uppercase tracking-widest text-gold">Verificado</span>
-      <img src="/google-brands-solid-full.svg" alt="Google Review" className="h-4 w-auto grayscale group-hover:grayscale-0 transition-all" />
+      <img src="https://nmnofwinjufyyykyaelc.supabase.co/storage/v1/object/sign/Perez%20Gonzalez%20Co.%20Abogados/google-brands-solid-full.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNzRlMzZmMy0wZDFhLTQ5NWMtYWMwMS0zNjMzMDY0Y2YwZTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJQZXJleiBHb256YWxleiBDby4gQWJvZ2Fkb3MvZ29vZ2xlLWJyYW5kcy1zb2xpZC1mdWxsLnN2ZyIsImlhdCI6MTc3MzA4MjM3NSwiZXhwIjoxODA0NjE4Mzc1fQ.aT2N2Qftk6GZrGU7CigIpfsiQyFfZFzOBapwvjzi11w" alt="Google Review" className="h-4 w-auto grayscale group-hover:grayscale-0 transition-all" />
     </div>
   </div>
 );
