@@ -2,7 +2,16 @@
   command   = "npm run build"
   publish   = "dist"
 
-# SPA redirect: all routes → index.html so React Router works
+# Netlify Edge Functions directory
+[build.environment]
+  NODE_VERSION = "20"
+
+# Edge Functions for server-side Notion proxy (avoids CORS in production)
+[[edge_functions]]
+  path     = "/notion-proxy/*"
+  function = "notion-proxy"
+
+# SPA redirect: all routes → index.html so React Router works on hard refresh/direct URL
 [[redirects]]
   from   = "/*"
   to     = "/index.html"

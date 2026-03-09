@@ -5,7 +5,9 @@
 const NOTION_TOKEN = import.meta.env.VITE_NOTION_TOKEN || '';
 const DATABASE_ID = import.meta.env.VITE_NOTION_DATABASE_ID || '';
 
-const API = import.meta.env.DEV ? '/notion-api' : 'https://api.notion.com/v1';
+// In dev: Vite proxy handles /notion-api -> api.notion.com
+// In prod: Netlify Edge Function at /notion-proxy handles it server-side (no CORS)
+const API = import.meta.env.DEV ? '/notion-api' : '/notion-proxy';
 
 // Rewrite Notion CDN URLs to go through local proxy (avoids CORS on uploaded files)
 function proxyNotionImageUrl(url: string): string {
